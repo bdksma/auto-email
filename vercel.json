@@ -1,18 +1,10 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "sendmail.php",
-      "use": "@vercel/php"
-    },
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
+  "functions": {
+    "sendmail.php": {
+      "runtime": "vercel-php@0.7.3"
     }
-  ],
+  },
   "routes": [
-    {
-      "src": "sendmail.php"
-    }
+    { "src": "sendmail.php",  "dest": "sendmail.php" }
   ]
 }
